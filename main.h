@@ -10,3 +10,20 @@ int convert_day(int month, int day);
 void print_times_table(int n);
 
 #endif
+
+#include "main.h"
+
+/**
+  * main - Test function for positive or negative
+  * Return: 0
+  */
+
+int main(void)
+{
+int i;
+
+i = 0;
+positive_or_negative(i);
+
+return (0);
+}
