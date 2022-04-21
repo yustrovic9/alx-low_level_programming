@@ -1,17 +1,22 @@
-#include <stdio.h>
-
+#include<stdio.h>
+#include "main.h"
 /**
- * main - check the code for Holberton School students.
- *
- * Return: Always 0.
+ *print_array - update value.
+ *@a: value to be evaluate.
+ *@n: value to be evaluate.
+ *Return: not.
  */
-int main(void)
+void print_array(int *a, int n)
 {
-    char s1[98];
-    char *p;
+	int x;
 
-    p = _strcpy(s1, "First, solve the problem. Then, write the code\n");
-    printf("%s", s1);
-    printf("%s", p);
-    return (0);
+	for (x = 0 ; x < n; x++)
+	{
+		printf("%d", a[x]);
+		if (x != n - 1)
+		{
+			printf(", ");
+		}
+	}
+	printf("\n");
 }
