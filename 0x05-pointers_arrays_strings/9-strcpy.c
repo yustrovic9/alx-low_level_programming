@@ -1,22 +1,24 @@
 #include<stdio.h>
 #include "main.h"
 /**
- *print_array - update value.
- *@a: value to be evaluate.
- *@n: value to be evaluate.
+ *_strcpy - update value.
+ *@dest: value to be evaluate.
+ *@src: value to be evaluate.
  *Return: not.
  */
-void print_array(int *a, int n)
+char *_strcpy(char *dest, char *src)
 {
-	int x;
+	int l = 0;
+	int x = 0;
 
-	for (x = 0 ; x < n; x++)
+	while (*(src + l) != '\0')
 	{
-		printf("%d", a[x]);
-		if (x != n - 1)
-		{
-			printf(", ");
-		}
+		l++;
 	}
-	printf("\n");
+	for ( ; x < l ; x++)
+	{
+		dest[x] = src[x];
+	}
+	dest[l] = '\0';
+	return (dest);
 }
