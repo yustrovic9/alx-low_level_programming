@@ -1,21 +1,17 @@
 #include "main.h"
+
 /**
-*_memset - The _memset() function fills
-* the first n bytes of the memory area
-* pointed to by s with the constant byte b
-*@s:target
-*@b: constant byte
-*@n:number of byte
-*Return: returns new value of target
-*/
-
-char *_memset(char *s, char b, unsigned int n)
+ * _puts_recursion - prints a string, followed by a new line.
+ * @s: string
+ * Return: no return.
+ */
+void _puts_recursion(char *s)
 {
-	while (n)
+	if (*s != '\0')
 	{
-		s[n - 1] = b;
-		n--;
+		_putchar(*s);
+		_puts_recursion(s + 1);
 	}
-	return (s);
-
+	else
+		_putchar('\n');
 }
